@@ -3,18 +3,29 @@ import './App.css'
 import './index.css'
 import { PlusIcon } from './icons/Plusicon'
 import { ShareIcon } from './icons/Shareicon'
+import { CardItem } from './component/CardItem'
+import { Createmodal } from './component/Createmodal'
+import { useState } from 'react'
 
 function App() {
+
+  const[modelOpen,setModelOpen]=useState(true)
   
 
   return (
-    <>
-    <Button 
+    < >
+    <Createmodal open={modelOpen} onClose={()=>{
+      setModelOpen(false)
+    }}/>
+    <div className='flex justify-end'>
+    <Button onClick={()=>{
+      setModelOpen(true)
+    }}
     varient={"primary"}
     startIcon={<PlusIcon size={"lg"}/>}
-     endIcon={<ShareIcon size={"lg"}/>}
+     
 
-       title={"share"} 
+       title={"Add Content"} 
        size="lg"
       
       ></Button>
@@ -28,27 +39,16 @@ function App() {
        size="lg"
       
       ></Button>
+      </div>
+      <div className='flex gap-4'>
+      <CardItem 
+        type="twitter" link="https://x.com/elonmusk/status/1880040599761596689" title="first twitte"
+      />
 
-<Button 
-    varient={"primary"}
-    startIcon={<PlusIcon size={"sm"}/>}
-     endIcon={<ShareIcon size={"sm"}/>}
+  <CardItem type="youtube" link="https://www.youtube.com/watch?v=eGtF-zkeo9s" title="first video"></CardItem>
 
-       title={"share"} 
-       size="sm"
-      
-      ></Button>
 
-<Button 
-    varient={"primary"}
-    startIcon={<PlusIcon size={"md"}/>}
-     endIcon={<ShareIcon size={"md"}/>}
-
-       title={"share"} 
-       size="md"
-      
-      ></Button>
-     
+  </div>
       
 
        

@@ -5,7 +5,10 @@ interface Buttoninterface{
     size:"lg"|"md"|"sm";
     startIcon?:ReactElement,
     endIcon?:ReactElement,
-    varient:"primary" | "secondary"
+    varient:"primary" | "secondary",
+    text:string,
+    onClick?:()=>void
+   
 }
 const SizeStyle={
     "lg":"px-8 py-4 text-xl bg-white-800 rounded-lg",
@@ -19,7 +22,7 @@ const varientStyle={
 }
 
 export function Button(props:Buttoninterface){
-    return <button className={SizeStyle[props.size]+ " "+ varientStyle[props.varient]}>
+    return <button onClick={props.onClick} className={SizeStyle[props.size]+ " "+ varientStyle[props.varient]}>
         <div className="flex items-center">
 
         {props.startIcon}
