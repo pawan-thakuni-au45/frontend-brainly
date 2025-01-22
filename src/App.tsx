@@ -10,7 +10,7 @@ import { Sidebar } from './component/ui/Sidebar'
 
 function App() {
 
-  const[modelOpen,setModelOpen]=useState(true)
+  const[modelOpen,setModelOpen]=useState(false)
   
 
   return (
@@ -19,7 +19,7 @@ function App() {
 <Sidebar/>
 
     </div>
-    <div className='ml-72 min-h-screen bg-gray-300 border-2'>
+    <div className='ml-72 min-h-screen bg-gray-100 border-2'>
     
     <Createmodal open={modelOpen} onClose={()=>{
       setModelOpen(false)
@@ -29,11 +29,11 @@ function App() {
       setModelOpen(true)
     }}
     varient={"primary"}
-    startIcon={<PlusIcon size={"lg"}/>}
+    startIcon={<PlusIcon size={"md"}/>}
      
 
        title={"Add Content"} 
-       size="lg"
+       size="md"
       
       ></Button>
 
