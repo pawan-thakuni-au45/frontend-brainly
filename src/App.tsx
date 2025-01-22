@@ -3,9 +3,10 @@ import './App.css'
 import './index.css'
 import { PlusIcon } from './icons/Plusicon'
 import { ShareIcon } from './icons/Shareicon'
-import { CardItem } from './component/CardItem'
-import { Createmodal } from './component/Createmodal'
+import { CardItem } from './component/ui/CardItem'
+import { Createmodal } from './component/ui/Createmodal'
 import { useState } from 'react'
+import { Sidebar } from './component/ui/Sidebar'
 
 function App() {
 
@@ -13,7 +14,13 @@ function App() {
   
 
   return (
-    < >
+   <>
+    <div >
+<Sidebar/>
+
+    </div>
+    <div className='ml-72 min-h-screen bg-gray-300 border-2'>
+    
     <Createmodal open={modelOpen} onClose={()=>{
       setModelOpen(false)
     }}/>
@@ -40,7 +47,7 @@ function App() {
       
       ></Button>
       </div>
-      <div className='flex gap-4'>
+      <div className='flex gap-4 '>
       <CardItem 
         type="twitter" link="https://x.com/elonmusk/status/1880040599761596689" title="first twitte"
       />
@@ -52,6 +59,7 @@ function App() {
       
 
        
+    </div>
     </>
   )
 }

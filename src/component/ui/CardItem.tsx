@@ -1,6 +1,6 @@
-import { Deleteicon } from "../icons/Deleteicon";
-import { Noteicon } from "../icons/Noteicon";
-import { ShareIcon } from "../icons/Shareicon";
+import { Deleteicon } from "../../icons/Deleteicon";
+import { Noteicon } from "../../icons/Noteicon";
+import { ShareIcon } from "../../icons/Shareicon";
 
 
 interface cardProps {

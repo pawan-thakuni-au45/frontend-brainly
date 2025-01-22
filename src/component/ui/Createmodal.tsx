@@ -1,16 +1,17 @@
-import { Crossicon } from "../icons/Crossicon";
-import { Button } from "./ui/Button";
+import { Crossicon } from "../../icons/Crossicon";
+import { Button } from "./Button";
 
 
 
 export function Createmodal({open,onClose}){
     return <div>
         {open && <div className="w-full h-full bg-slate-400 fixed opacity-50 flex justify-center">
- <div className="flex flex-col justify-center">
+ <div className="flex flex-col justify-center hover:cursor-pointer">
             <span className="bg-white p-4">
   <div>
    <div onClick={onClose}>
    <Crossicon/>
+   
    </div>
     
   </div>
