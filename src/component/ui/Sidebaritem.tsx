@@ -5,8 +5,14 @@ import { ReactElement } from "react"
     text:string
   }){
 
-    return <div className="flex" >
-         {icon}{text}
+    return <div className="flex text-gray-700 py-2 cursor-pointer  hover:bg-gray-200 max-w-48 pl-4" >
+
+      <div className="pr-4">
+      {icon}
+      </div>
+         
+         
+         {text}
 
     </div>
   }
