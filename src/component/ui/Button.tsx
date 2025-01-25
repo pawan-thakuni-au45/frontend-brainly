@@ -17,7 +17,7 @@ const SizeStyle={
 }
 
 const varientStyle={
-    "primary":"bg-purple-600 text-white",
+    "primary":"bg-purple-400 text-white",
     "secondary":"bg-purple-400 text-purple-600"
 }
 
@@ -26,7 +26,7 @@ export function Button(props:Buttoninterface){
         <div className="flex items-center">
 
         {props.startIcon}
-        {props.title}
+        {props.text}
    
     {props.endIcon}
         </div>

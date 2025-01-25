@@ -3,6 +3,7 @@ import './App.css'
 import './index.css'
 
 import { Dashboard } from './Pages/Dashboard'
+import { Signup } from './Pages/Signup'
 
 function App() {
 
@@ -11,7 +12,8 @@ function App() {
 
   return (
    <>
-   <Dashboard/>
+   <Signup/>
+   {/* <Dashboard/> */}
 
      
 
