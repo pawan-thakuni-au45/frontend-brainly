@@ -3,7 +3,7 @@ import { Input } from "../component/ui/Input";
 
 
 export function Signup(){
-     return <div className="h-full w-full bg-slate-100 flex justify-center items-center py-60">
+     return <div className="h-full w-full bg-green-100 flex justify-center items-center py-60">
         <div className="border bg-white rounded-lg  pr-4 pl-4 py-4 min-w-48">
 
             <Input placeholder="username"></Input>
