@@ -2,6 +2,8 @@ import { useRef, useState } from "react";
 import { Crossicon } from "../../icons/Crossicon";
 import { Button } from "./Button";
 import { Twitter } from "../../icons/Twitter";
+import axios from "axios";
+import { BACKEND_URL } from "../../config";
 
 
 enum ContentType {
@@ -16,10 +18,21 @@ export function Createmodal({open,onClose}){
   const linkRef=useRef<any>()
   const [type,setType]=useState(ContentType.Youtube)
 
-  function addContent(){
+  async function addContent(){
 
-    const title=titleRef.current.value
-const link=linkRef.current.value
+    const title=titleRef.current?.value
+const link=linkRef.current?.value
+
+await axios.post(`${BACKEND_URL}/api/v1/content`,{
+  title,
+  link,
+  
+  type
+},{
+  headers:{
+    "Authorization":localStorage.getItem("token")
+  }
+})
   }
     return <div>
         {open && <div className="w-full h-full bg-slate-400 fixed opacity-50 flex justify-center">
@@ -38,6 +51,7 @@ const link=linkRef.current.value
     <Input refrence={linkRef} placeholder={"Link"}></Input>
 
   </div>
+  <h1>Type</h1>
   <div className=" py-4 flex gap-2">
     <div>
     <Button className="gap-x-3" text="Youtube" varient={type===ContentType.Youtube ? "primary":"secondary"} onClick={()=>{

@@ -7,10 +7,12 @@ import { CardItem } from '../component/ui/CardItem'
 import { Createmodal } from '../component/ui/Createmodal'
 import { useState } from 'react'
 import { Sidebar } from '../component/ui/Sidebar'
+import { useContent } from '../hooks/useContent'
 
 export function Dashboard() {
 
   const[modelOpen,setModelOpen]=useState(false)
+  const content=useContent()
   
 
   return (
@@ -48,11 +50,12 @@ export function Dashboard() {
       ></Button>
       </div>
       <div className='flex gap-4 '>
-      <CardItem 
-        type="twitter" link="https://x.com/elonmusk/status/1880040599761596689" title="first twitte"
-      />
+        {content.map(({type,link,title})=>  <CardItem 
+        type={type} link={link} title={title}
+      />)}
+    
 
-  <CardItem type="youtube" link="https://www.youtube.com/watch?v=eGtF-zkeo9s" title="first video"></CardItem>
+  {/* <CardItem type="youtube" link="https://www.youtube.com/watch?v=eGtF-zkeo9s" title="first video"></CardItem> */}
 
 
   </div>
