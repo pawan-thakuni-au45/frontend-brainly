@@ -18,7 +18,7 @@ const SizeStyle={
 
 const varientStyle={
     "primary":"bg-purple-400 text-white",
-    "secondary":"bg-purple-400 text-purple-600"
+    "secondary":"bg-green-200 text-purple-600"
 }
 
 export function Button(props:Buttoninterface){
