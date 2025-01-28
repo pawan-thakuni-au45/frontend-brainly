@@ -1,7 +1,12 @@
 import { Button } from "./Button"
 
-export function Input ({onChange,placeholder}:{placeholder:String;onChange:()=>void}){
+// interface inputProps{
+//     placeholder:string,
+//     refrence:any
+// }
+
+export function Input ({placeholder,refrence}:{placeholder:string,refrence:any}){
     return <div className="rounded-md">
-        <input placeholder={placeholder} type={"text"} className="px-4 py-4 rounded-md border" onChange={onChange} ></input>
+        <input ref={refrence} placeholder={placeholder} type={"text"} className="px-4 py-4 rounded-md border"  ></input>
     </div>
 }
