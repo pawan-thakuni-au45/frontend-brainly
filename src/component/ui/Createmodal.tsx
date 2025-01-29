@@ -35,7 +35,7 @@ await axios.post(`${BACKEND_URL}/api/v1/content`,{
   }
 }) }
     return <div>
-        {open && <div className="w-full h-full bg-slate-400 fixed opacity-50 flex justify-center">
+        {open && <div className="w-full h-full bg-slate-400 fixed opacity-100 flex justify-center">
  <div className="flex flex-col justify-center hover:cursor-pointer">
             <span className="bg-white p-4">
   <div>

@@ -10,9 +10,12 @@ interface cardProps {
 }
 
    export function CardItem({title,link,type}:cardProps){
-
+    
+    function deletepost(){
+      
+    }
 return (
-<div className="rounded-md bg-slate-200 max-w-6 min-w-72 min-h-48">
+<div className="rounded-md bg-slate-10 border max-w-72 min-w-72 min-h-16">
   <div className="justify-between flex items-center">
     <div className="flex py-4 ">
         <div className="pr-3">
@@ -25,7 +28,7 @@ return (
     </div>
     <div className="flex">
         <div className="pr-3">
-        <Deleteicon></Deleteicon>
+        <Deleteicon onClick={deletepost}></Deleteicon>
 
         </div>
         <a href={link} target="_blank"></a>

@@ -50,7 +50,7 @@ export function Dashboard() {
       
       ></Button>
       </div>
-      <div className='flex gap-4 flex-wrap'>
+      <div className='flex gap-4 flex-wrap bg-white'>
         
         {content.map(({type,link,title})=>  <CardItem 
          
