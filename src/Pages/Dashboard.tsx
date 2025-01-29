@@ -13,6 +13,7 @@ export function Dashboard() {
 
   const[modelOpen,setModelOpen]=useState(false)
   const content=useContent()
+  console.log(content);
   
 
   return (
@@ -50,12 +51,17 @@ export function Dashboard() {
       ></Button>
       </div>
       <div className='flex gap-4 '>
+        
         {content.map(({type,link,title})=>  <CardItem 
-        type={type} link={link} title={title}
+         
+        
+        type={type}
+        link={link}
+        title={title}  
       />)}
     
 
-  {/* <CardItem type="youtube" link="https://www.youtube.com/watch?v=eGtF-zkeo9s" title="first video"></CardItem> */}
+  
 
 
   </div>

@@ -4,8 +4,8 @@ import { ShareIcon } from "../../icons/Shareicon";
 
 
 interface cardProps {
-  title:String,
-  link:String,
+  title:string,
+  link:string,
   type:"youtube" | "twitter"
 }
 
@@ -39,13 +39,18 @@ return (
   </div>
 
       <div className="PY-3">
-        
-        {type==="youtube" &&  <iframe className="w-full " src={link.replace("watch","embed").replace("?v=","/")} title="YouTube video player" 
+         
+         {type==="youtube" &&  <iframe className="w-md h-md"  
+        src={link.replace("watch","embed").replace("?v=","/")}   title="YouTube video player" 
       frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-      referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>}
+      referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>} 
+
+{/* src={link.replace("watch","embed").replace("?v=","/")}  */}
+{/* src={link.replace("watch","embed").replace("?v=","/")}  */}
     
 {type==="twitter" && <blockquote className="twitter-tweet">
-  <a href={link.replace("x.com","twitter.com")}></a> 
+
+    <a href={link.replace("x.com","twitter.com")}></a>   
 </blockquote> }
 
       </div>

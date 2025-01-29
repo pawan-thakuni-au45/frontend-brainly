@@ -4,6 +4,7 @@ import { Button } from "./Button";
 import { Twitter } from "../../icons/Twitter";
 import axios from "axios";
 import { BACKEND_URL } from "../../config";
+import { Input } from "./Input";
 
 
 enum ContentType {
@@ -14,8 +15,8 @@ enum ContentType {
 
 
 export function Createmodal({open,onClose}){
-  const titleRef=useRef<any>()
-  const linkRef=useRef<any>()
+  const titleRef=useRef<HTMLInputElement>()
+  const linkRef=useRef<HTMLInputElement>()
   const [type,setType]=useState(ContentType.Youtube)
 
   async function addContent(){
@@ -32,8 +33,7 @@ await axios.post(`${BACKEND_URL}/api/v1/content`,{
   headers:{
     "Authorization":localStorage.getItem("token")
   }
-})
-  }
+}) }
     return <div>
         {open && <div className="w-full h-full bg-slate-400 fixed opacity-50 flex justify-center">
  <div className="flex flex-col justify-center hover:cursor-pointer">
@@ -79,8 +79,3 @@ await axios.post(`${BACKEND_URL}/api/v1/content`,{
 
 }
 
-function Input ({onChange,placeholder}:{onChange:()=>void}){
-    return <div className="rounded-md">
-        <input placeholder={placeholder} type={"text"} className="px-4 py-4 rounded-md border" onChange={onChange} ></input>
-    </div>
-}
