@@ -12,7 +12,7 @@ interface cardProps {
    export function CardItem({title,link,type}:cardProps){
 
 return (
-<div className="rounded-md bg-slate-200 max-w-72 min-w-72 min-h-48">
+<div className="rounded-md bg-slate-200 max-w-6 min-w-72 min-h-48">
   <div className="justify-between flex items-center">
     <div className="flex py-4 ">
         <div className="pr-3">

@@ -22,7 +22,7 @@ export function Dashboard() {
 <Sidebar/>
 
     </div>
-    <div className='ml-72 min-h-screen bg-gray-100 border-2'>
+    <div className='ml-72 min-h-screen bg-gray-100 border-2 min-w-80'>
     
     <Createmodal open={modelOpen} onClose={()=>{
       setModelOpen(false)
@@ -50,7 +50,7 @@ export function Dashboard() {
       
       ></Button>
       </div>
-      <div className='flex gap-4 '>
+      <div className='flex gap-4 flex-wrap'>
         
         {content.map(({type,link,title})=>  <CardItem 
          
