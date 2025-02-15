@@ -13,7 +13,7 @@ export function Dashboard() {
 
   const[modelOpen,setModelOpen]=useState(false)
   const content=useContent()
-  console.log(content);
+ 
   
 
   return (
